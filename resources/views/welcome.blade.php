@@ -12,6 +12,10 @@
 
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+    
+    <!-- JS -->
+    <script src="{{asset('js/app.js') }}" defer></script> 
+
 </head>
 <body class="bg-gray-100 h-screen antialiased leading-none font-sans">
 <div class="flex flex-col">
@@ -27,7 +31,9 @@
             @endauth
         </div>
     @endif
-
+</div>
+<main>
+    @yield('content')
     <div class="min-h-screen flex items-center justify-center">
         <div class="flex flex-col justify-around h-full">
             <div>
